@@ -9,9 +9,9 @@ public enum ErrorCode {
     /* 400 BAD_REQUEST : 잘못된 요청 */
     INVALID_INPUT_VALUE(400, "BAD_REQUEST", "입력값이 올바르지 않습니다."),
     BAD_REQUEST(400, "BAD_REQUEST", "잘못된 요청입니다."),
-    SELF_LIKE_NOT_ALLOWED(400, "BAD_REQUEST", "자신의 댓글에는 좋아요를 요청할 수 없습니다."),
     WRONG_PASSWORD(400, "BAD_REQUEST", "잘못된 비밀번호입니다."),
     INVALID_QUERY(400, "BAD_REQUEST", "인코딩에 실패했습니다."),
+    TITLE_OR_CATEGORY_REQUIRED(400, "BAD_REQUEST", "제목 또는 카테고리는 필수값입니다."),
 
     /* 401 UNAUTHORIZED : 인증되지 않은 사용자 */
     UNAUTHENTICATED_USERS(401, "UNAUTHORIZED", "인증이 필요합니다."),
@@ -25,8 +25,7 @@ public enum ErrorCode {
     /* 404 NOT_FOUND : Resource 를 찾을 수 없음 */
     MEMBER_NOT_FOUND(404, "NOT_FOUND", "해당 유저 정보를 찾을 수 없습니다."),
     RESOURCE_NOT_FOUND(404, "NOT_FOUND", "해당 정보를 찾을 수 없습니다."),
-    MOVIE_NOT_FOUND(404, "NOT_FOUND", "해당 영화를 찾을 수 없습니다."),
-    REVIEW_NOT_FOUND(404, "NOT_FOUND", "해당 리뷰를 찾을 수 없습니다."),
+
 
     /* 405 METHOD_NOT_ALLOWED : 지원하지 않는 HTTP Method */
     METHOD_NOT_ALLOWED(405, "METHOD_NOT_ALLOWED", "허용되지 않은 요청입니다."),
@@ -34,7 +33,6 @@ public enum ErrorCode {
     /* 409 CONFLICT : 데이터 중복 */
     DUPLICATE_EMAIL_RESOURCE(409, "CONFLICT", "이메일이 이미 존재합니다"),
     DUPLICATE_NICKNAME_RESOURCE(409, "CONFLICT", "닉네임이 이미 존재합니다"),
-    REVIEW_ALREADY_EXISTS(409, "CONFLICT", "리뷰가 이미 존재합니다."),
 
     /* 500 INTERNAL_SERVER_ERROR */
     SERVER_ERROR(500, "INTERNAL_SERVER_ERROR", "예기치 못한 오류가 발생하였습니다.");

@@ -31,7 +31,9 @@ public class CategoryAndTitleService {
                 member
         );
 
-        //TODO: title과 category or 해서 하나라도 비어있으면 에러 뜨게
+        if(requestDto.getTitle().isEmpty() || requestDto.getCategoryName().isEmpty()) {
+            throw new CustomException(ErrorCode.TITLE_OR_CATEGORY_REQUIRED);
+        }
 
         member.addCategoryAndTitle(categoryAndTitle);
         CategoryAndTitle savedCategoryAndTitle = categoryAndTitleRepository.save(categoryAndTitle);
