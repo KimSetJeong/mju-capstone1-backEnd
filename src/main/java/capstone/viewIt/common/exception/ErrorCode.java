@@ -12,6 +12,7 @@ public enum ErrorCode {
     WRONG_PASSWORD(400, "BAD_REQUEST", "잘못된 비밀번호입니다."),
     INVALID_QUERY(400, "BAD_REQUEST", "인코딩에 실패했습니다."),
     TITLE_OR_CATEGORY_REQUIRED(400, "BAD_REQUEST", "제목 또는 카테고리는 필수값입니다."),
+    OVER_RESUME(400, "BAD_REQUEST","질문,답변의 개수가 부족 또는 초과되었습니다."),
 
     /* 401 UNAUTHORIZED : 인증되지 않은 사용자 */
     UNAUTHENTICATED_USERS(401, "UNAUTHORIZED", "인증이 필요합니다."),

@@ -26,12 +26,12 @@ public class CategoryAndTitleService {
                 .orElseThrow(() -> new CustomException(ErrorCode.MEMBER_NOT_FOUND));
 
         CategoryAndTitle categoryAndTitle = CategoryAndTitle.of(
-                requestDto.getTitle(),
-                requestDto.getCategoryName(),
+                requestDto.title(),
+                requestDto.categoryName(),
                 member
         );
 
-        if(requestDto.getTitle().isEmpty() || requestDto.getCategoryName().isEmpty()) {
+        if(requestDto.title().isEmpty() || requestDto.categoryName().isEmpty()) {
             throw new CustomException(ErrorCode.TITLE_OR_CATEGORY_REQUIRED);
         }
 
